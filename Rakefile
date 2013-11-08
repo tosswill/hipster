@@ -5,8 +5,8 @@ require 'parse-ruby-client'
 
 task :default => [:run]
 
-heroku_env = File.open( 'keys.rb')
-load(heroku_env) if File.exists?(heroku_env)
+ 
+load(File.open( 'keys.rb')) if File.exists?('keys.rb')
 
 Parse.init :application_id => ENV['PARSE_APPLICATION_ID'] ,
            :api_key        => ENV['PARSE_API_KEY'] 
