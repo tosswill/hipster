@@ -1,2 +1,5 @@
 source 'https://rubygems.org'
 gem 'sinatra'
+gem 'twitter'
+gem 'parse-ruby-client'
+gem 'rake'
