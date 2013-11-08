@@ -53,7 +53,7 @@ namespace :trends do
         puts "Existing term: #{name}"
         existing["time_string"] =  existing["time_string"] + " " + "#{capture_time}"
         existing["ticks"] = Parse::Increment.new(1)
-        existing["high_rank"] = rank if existing["high_rank"].to_i < rank
+        existing["high_rank"] = rank if existing["high_rank"].to_i > rank #lower rank is 'higher'
         existing.save unless @debug
       else
         puts "New term: #{name}"
