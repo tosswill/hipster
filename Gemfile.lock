@@ -1,8 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    active_support (3.0.0)
+      activesupport (= 3.0.0)
+    activesupport (3.0.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    i18n (0.6.5)
     iron_core (1.0.1)
       rest (>= 2.2.0)
     iron_mq (4.0.3)
@@ -39,6 +43,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_support
+  i18n
   parse-ruby-client
   rake
   sinatra
