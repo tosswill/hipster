@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'active_support/all'
+require 'parse-ruby-client'
 
 get '/' do
   "Hello World!"
