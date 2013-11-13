@@ -33,7 +33,7 @@ namespace :trends do
     capture_time = Time.now.to_i
     trend_string = ""
 
-    terms = Twitter.trends(woid , {exclude: 'hashtags'})
+    terms = Twitter.trends(woid)
     @debug = false
 
     def make_term( name, rank, time )
