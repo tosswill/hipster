@@ -35,6 +35,7 @@ get '/random' do
   
   vals = Parse::Query.new("TopicTrend").tap do |q|
     q.less_eq("high_rank", min_rank.to_i)
+    q.limit(count)
     if start_time && end_time
       q.greater_eq("updatedAt",Parse::Date.new(start_time))
       q.less_eq("updatedAt",Parse::Date.new(end_time))
